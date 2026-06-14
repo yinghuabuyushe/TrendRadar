@@ -189,6 +189,10 @@ rss:
       name: "GitHub Trending Python"
       url: "https://rsshub.app/github/trending/daily/python"
 
+    - id: "hn-newest-50"
+      name: "HN 高分新帖"
+      url: "https://hnrss.org/newest?points=100"
+
     # 自定义源示例
     # - id: "custom-feed"
     #   name: "自定义源"
