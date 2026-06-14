@@ -41,7 +41,7 @@ app:
 # ===============================================================
 schedule:
   enabled: true                        # 是否启用调度系统（true=启用, false=关闭，默认关闭）
-  preset: "morning_evening"             # 预设模板名称（见上方说明）
+  preset: "always_on"             # 预设模板名称（见上方说明）
 
 
 # ===============================================================
@@ -140,6 +140,38 @@ rss:
     - id: "yahoo-finance"
       name: "雅虎财经"
       url: "https://finance.yahoo.com/news/rssindex"
+      
+    - id: "arstechnica"
+      name: "Ars Technica"
+      url: "https://feeds.arstechnica.com/arstechnica/index"
+      
+    - id: "36kr"
+      name: "36氪"
+      url: "https://36kr.com/feed"
+      
+    - id: "hf-papers"
+      name: "Hugging Face Papers"
+      url: "https://huggingface.co/papers/feed"
+      
+    - id: "github-trending"
+      name: "GitHub Trending"
+      url: "https://github-trending-rss.now.sh/daily.xml"
+      
+    - id: "ft-china"
+      name: "FT中文网"
+      url: "https://www.ftchinese.com/rss/news"
+      
+    - id: "indiehackers"
+      name: "Indie Hackers"
+      url: "https://www.indiehackers.com/feed.xml"
+      
+    - id: "quanta"
+      name: "Quanta Magazine"
+      url: "https://www.quantamagazine.org/feed/"
+      
+    - id: "bbc-world"
+      name: "BBC World"
+      url: "http://feeds.bbci.co.uk/news/world/rss.xml"
 
     # 自定义源示例
     # - id: "custom-feed"
@@ -153,7 +185,7 @@ rss:
 # 4. 报告模式
 # ===============================================================
 report:
-  mode: "current"                     # 报告模式（开启 schedule 后作为默认值，会被 timeline 时段覆盖）
+  mode: "incremental"                     # 报告模式（开启 schedule 后作为默认值，会被 timeline 时段覆盖）
                                       # daily = 当日汇总，按时推送当天所有匹配新闻（会包含之前推过的）
                                       # current = 当前榜单，按时推送当前在榜的匹配新闻（持续在榜的每次都出现）
                                       # incremental = 增量监控，只推送新增内容，零重复（没有新增时不推送）
@@ -245,9 +277,9 @@ display:
   # 独立展示区：将指定平台/RSS 完整展示，不受关键词过滤
   # 推送展示由 regions.standalone 控制，AI 分析由 ai_analysis.include_standalone 控制
   standalone:
-    platforms: ["zhihu", "wallstreetcn-hot"]     # 热榜平台 ID 列表（如 ["zhihu", "weibo"]）
-    rss_feeds: []                                # RSS 源 ID 列表（如 ["hacker-news"]）
-    max_items: 20                                # 每个源最多展示条数（0=不限制）
+    platforms: ["wallstreetcn-hot", "cls-hot", "zhihu"]     # 热榜平台 ID 列表（如 ["zhihu", "weibo"]）
+    rss_feeds: ["hf-papers", "hacker-news", "github-trending", "arstechnica", "36kr", "indiehackers"]                                # RSS 源 ID 列表（如 ["hacker-news"]）
+    max_items: 10                                # 每个源最多展示条数（0=不限制）
 
 
 # ===============================================================
