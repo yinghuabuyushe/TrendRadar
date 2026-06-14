@@ -151,11 +151,11 @@ rss:
       
     - id: "hf-papers"
       name: "Hugging Face Papers"
-      url: "https://huggingface.co/papers/feed"
+      url: "https://rsshub.app/huggingface/daily-papers"
       
     - id: "github-trending"
       name: "GitHub Trending"
-      url: "https://github-trending-rss.now.sh/daily.xml"
+      url: "https://rsshub.app/github/trending/daily/any"
       
     - id: "ft-china"
       name: "FT中文网"
@@ -172,6 +172,22 @@ rss:
     - id: "bbc-world"
       name: "BBC World"
       url: "http://feeds.bbci.co.uk/news/world/rss.xml"
+      
+    - id: "product-hunt"
+      name: "Product Hunt"
+      url: "https://rsshub.app/producthunt/today"
+      
+    - id: "hn-best"
+      name: "HN 高分精选"
+      url: "https://hnrss.org/best"
+      
+    - id: "hn-show"
+      name: "HN Show 秀项目"
+      url: "https://hnrss.org/show"
+
+    - id: "github-trending-py"
+      name: "GitHub Trending Python"
+      url: "https://rsshub.app/github/trending/daily/python"
 
     # 自定义源示例
     # - id: "custom-feed"
